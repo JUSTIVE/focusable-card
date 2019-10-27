@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'Card',
   props: {
     msg: String,
     depth:Number,
@@ -23,7 +23,7 @@ export default {
     getWidth: function () { return window.innerWidth; },
     getHeight: function () { return window.innerHeight; },
     blurValue(){
-      return Math.abs(this.globalscroll2-(this.depth))*2;
+      return Math.abs(this.globalscroll2+1-(this.depth))*2;
     },
     translateYValue(){
       return (this.depth-this.offset)*this.getHeight*this.ySpread;
@@ -54,8 +54,8 @@ export default {
   position:absolute;
   padding:16px;
   text-align: left;
-  width:80vw;
-  height:80vh;
+  width:60vw;
+  height:60vh;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   border-radius: 12px;
 }

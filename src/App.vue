@@ -2,7 +2,7 @@
   <div id="app" @mousewheel="MouseScroll" :style="`background:${titles[this.globalScroll].background};transition:all ${tempo} cubic-bezier(.25,.8,.25,1);`" v-touch:tap="TapAction">
     {{globalScroll}}
     <div :style="`transform:translateX(${getTranslateXValue}px) translateY(${getTranslateYValue}px); transition:all ${tempo} cubic-bezier(.25,.8,.25,1);`">
-    <HelloWorld
+    <Card
       v-for="(item,index) in titles"
       :key="index"
       :globalscroll2="globalScroll"
@@ -16,12 +16,12 @@
   </div>
 </template>
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import Card from "./components/Card.vue";
 
 export default {
   name: "app",
   components: {
-    HelloWorld
+    Card
   },
   created(){
     window.addEventListener('resize',this.updateSize());
@@ -49,23 +49,23 @@ export default {
       titles: [
         { title: "Profile", background:'#F23D4C' },
         {
-          title: "Projects",
+          title: "DEMO",
           background:'#735571'
         },
         {
-          title: "Skills",
+          title: "DEMO2",
           background:'#04BFBF'
         },
         {
-          title: "Publications",
+          title: "DEMO3",
           background:'#C6D93B'
         },
         {
-          title: "Activities",
+          title: "DEMO4",
           background:'#F2B705'
         },
         {
-          title:"Awards",
+          title:"DEMO5",
           background:'#FF8051'
         }
       ]
