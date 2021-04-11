@@ -1,6 +1,6 @@
 # Focusable Card
 
-![image](/images/preview.png)
+![image](/images/preview.gif)
 
 preview available [here](https://justive.github.io/focusable-card/index.html)
 
